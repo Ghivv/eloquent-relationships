@@ -36,6 +36,16 @@
                                             </div>
                                         </div>
                                     @endforeach
+                                    <!-- Form untuk menambahkan komentar -->
+                                    <form action="{{ route('comment.store') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="post_id" value="{{ $post->id }}">
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="comment" class="form-control"
+                                                placeholder="Tulis komentar..." required>
+                                            <button type="submit" class="btn btn-primary">Kirim</button>
+                                        </div>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
