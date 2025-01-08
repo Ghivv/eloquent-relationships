@@ -14,6 +14,15 @@
                 <h3 class="text-center"><a href="https://santrikoding.com">www.santrikoding.com</a></h3>
                 <h5 class="text-center my-4">Laravel Eloquent Relationship : One To One</h5>
                 <table class="table table-bordered table-striped">
+
+                    {{-- Form untuk menambahkan data pengguna --}}
+                    <form action="{{route('users.store')}}" method="POST">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama User</label>
+                            <input type="text" class="form-control" id="phone" name="phone" required>
+                        </div>
+                    </form>
                     <thead>
                         <tr>
                             <th>Nama User</th>
