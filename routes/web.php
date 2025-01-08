@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function () {
  * @path /users
  * @method GET
  */
-Route::get('/users', [\App\Http\Controllers\UserController::class, 'index']);
+Route::get('/users', [UserController::class, 'index'])->name('users.index');
 
 /**
  * @path /posts
@@ -31,7 +31,5 @@ Route::get('/users', [\App\Http\Controllers\UserController::class, 'index']);
  */
 Route::get('/posts', [\App\Http\Controllers\PostController::class, 'index']);
 Route::post('/comment', [CommentController::class, 'store'])->name('comment.store');
-Route::get('/users', [UserController::class, 'index'])->name('users.index');
-Route::get('/users', [UserController::class, 'store'])->name('users.store');
 
 require __DIR__.'/auth.php';
