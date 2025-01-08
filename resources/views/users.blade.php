@@ -22,7 +22,13 @@
                             <label for="name" class="form-label">Nama User</label>
                             <input type="text" class="form-control" id="phone" name="phone" required>
                         </div>
+                        <div class="mb-3">
+                        <label for="phone" class="form-label">Nomor Telepon</label>
+                        <input type="text" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
                     </form>
+                    
                     <thead>
                         <tr>
                             <th>Nama User</th>

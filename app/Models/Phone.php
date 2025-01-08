@@ -9,6 +9,8 @@ class Phone extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['phone'];
+
     /**
      * user
      *
